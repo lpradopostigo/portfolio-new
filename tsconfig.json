@@ -1,5 +1,8 @@
 {
-  "include": ["src", "types"],
+  "include": [
+    "source",
+    "types"
+  ],
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
@@ -18,7 +21,10 @@
     /* Additional Options */
     "strict": true,
     "skipLibCheck": true,
-    "types": ["mocha", "snowpack-env"],
+    "types": [
+      "mocha",
+      "snowpack-env"
+    ],
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
