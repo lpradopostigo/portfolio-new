@@ -17,6 +17,8 @@ export default function Projects() {
             "A symmetric cipher image tool, the algorithm was developed in Rust and brought to the web using Web Assembly"
           }
           imageSource={imageCipher}
+          websiteLink="https://brocolio-cipher.netlify.app"
+          repositoryLink="https://github.com/lprapopostigo/brocolio-cipher"
         />
 
         <ProjectCard
@@ -25,22 +27,24 @@ export default function Projects() {
             "Simple audio player developed using Lit as component library, typescript and redux for state management"
           }
           imageSource={audioPlayer}
+          repositoryLink="https://github.com/lpradopostigo/brocolio-music-player"
+          websiteLink="https://brocolio-music-player.netlify.app"
         />
 
         <ProjectCard
           name={"Calculator"}
-          description={
-            "Material Design responsive javascript calculator"
-          }
+          description={"Material Design responsive javascript calculator"}
           imageSource={calculator}
+          repositoryLink="https://github.com/lprapopostigo/web-calculator"
+          websiteLink="https://brocolio-calculator.netlify.app"
         />
 
         <ProjectCard
           name={"Travelly"}
-          description={
-            "Landing Page concept for a travel agency"
-          }
+          description={"Landing Page concept for a travel agency"}
           imageSource={travelly}
+          websiteLink="https://travelly-brocolio.netlify.app"
+          repositoryLink="https://github.com/lprapopostigo/travelly"
         />
       </div>
     </section>

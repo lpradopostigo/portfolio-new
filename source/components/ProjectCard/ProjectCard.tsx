@@ -5,6 +5,8 @@ interface ProjectCardProps {
   name: string;
   imageSource: string;
   imageAlternateText?: string;
+  websiteLink?: string;
+  repositoryLink: string;
 }
 
 export default function ProjectCard(props: ProjectCardProps) {
@@ -19,6 +21,28 @@ export default function ProjectCard(props: ProjectCardProps) {
         <span className="font-display-0 font-semibold text-lg">
           {props.name}
         </span>
+
+        <div className="flex gap-3 text-sm text-white font-display-0">
+          <a
+            href={props.websiteLink}
+            className="p-1 bg-black hover:bg-purple-500"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            website
+          </a>
+
+          {props.repositoryLink != null && (
+            <a
+              href={props.repositoryLink}
+              className="p-1 bg-black hover:bg-green-500"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              repository
+            </a>
+          )}
+        </div>
         <p>{props.description}</p>
       </div>
     </div>
