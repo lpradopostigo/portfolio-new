@@ -8,9 +8,9 @@ import travelly from "../../../assets/travelly.jpg";
 
 export default function Projects() {
   return (
-    <section id="projects" className="flex flex-col gap-5 p-5">
+    <section id="projects" className="flex flex-col gap-10 p-10">
       <h2 className="text-xl font-display-0 font-semibold">Projects</h2>
-      <div className="flex flex-wrap gap-5 self-center justify-center md:gap-10">
+      <div className="flex flex-wrap gap-10 self-center justify-center">
         <ProjectCard
           name={"Image Cipher Tool"}
           description={

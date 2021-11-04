@@ -25,7 +25,7 @@ export default function ProjectCard(props: ProjectCardProps) {
         <div className="flex gap-3 text-sm text-white font-display-0">
           <a
             href={props.websiteLink}
-            className="p-1 bg-black hover:bg-purple-500"
+            className="p-1 bg-black hover:bg-blue-600"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -35,7 +35,7 @@ export default function ProjectCard(props: ProjectCardProps) {
           {props.repositoryLink != null && (
             <a
               href={props.repositoryLink}
-              className="p-1 bg-black hover:bg-green-500"
+              className="p-1 bg-black hover:bg-blue-600"
               target="_blank"
               rel="noreferrer noopener"
             >
