@@ -16,6 +16,7 @@ export default function ProjectCard(props: ProjectCardProps) {
         className="max-h-56 object-cover object-top w-full shadow-md sm:max-h-80 xs:max-h-64"
         src={props.imageSource}
         alt={props.imageAlternateText ?? props.name}
+        loading="lazy"
       />
       <div className="p-5 flex flex-col gap-3">
         <span className="font-display-0 font-semibold text-lg">
