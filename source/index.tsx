@@ -4,6 +4,9 @@ import ReactDOM from 'react-dom';
 import App from './components/App/App';
 import './index.css';
 
+document.documentElement.style.setProperty('--vh', `${(window.innerHeight * 0.01)}px`);
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
