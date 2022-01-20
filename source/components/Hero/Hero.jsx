@@ -6,7 +6,11 @@ function Hero() {
   const { width, height } = useWindowSize();
 
   return (
-    <section id="hero" className="flex flex-col gap-4" style={{height: window.innerHeight*.9}}>
+    <section
+      id="hero"
+      className="flex flex-col gap-4"
+      style={{ height: window.innerHeight * 0.9 }}
+    >
       <h1 className="text-white text-center font-display-1 text-yellow-300 text-2xl mt-10">
         Luis Angel <br />
         Prado Postigo
@@ -24,7 +28,7 @@ function Hero() {
   );
 }
 
-function draw(context: CanvasRenderingContext2D, currentFrame: number) {
+function draw(context, currentFrame) {
   if (context != null) {
     context.globalCompositeOperation = "source-over";
     context.fillStyle = "hsla(0,0%,0%,0.7)";

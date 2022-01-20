@@ -1,15 +1,6 @@
 import React from "react";
 
-interface ProjectCardProps {
-  description: string;
-  name: string;
-  imageSource: string;
-  imageAlternateText?: string;
-  websiteLink?: string;
-  repositoryLink: string;
-}
-
-export default function ProjectCard(props: ProjectCardProps) {
+export default function ProjectCard(props) {
   return (
     <div className="shadow-lg rounded-md overflow-hidden md:w-80 sm:w-72 xs:w-80">
       <img
