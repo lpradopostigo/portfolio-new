@@ -3,13 +3,15 @@ import bg from "../../../assets/scattered-forcefields.svg";
 
 export default function Hero() {
   return (
-    <section id="hero" className="h-screen-92">
-      <h1 className="font-display-1 text-6xl text-left p-8">
-        Hi,
-        <br />
-        I'm Luis Prado,
-        <br /> Front End Developer
-      </h1>
+    <section id="hero" className="h-screen-92 font-display-1">
+      <div className="flex flex-col px-8 py-10 gap-3">
+        <span className="text-8xl font-medium">Hi,</span>
+        <span className="text-6xl">
+          I'm Luis Prado,
+        </span>
+
+        <span className="text-4xl font-light">Front End Developer</span>
+      </div>
 
       <img
         src={bg}

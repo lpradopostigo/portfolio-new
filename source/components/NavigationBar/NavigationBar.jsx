@@ -7,7 +7,6 @@ export default function NavigationBar() {
   useEffect(() => {
     const initialClasses = ref.current.className;
     const handleScroll = () => {
-      console.log(window.scrollY)
       if (window.scrollY >= 80) {
         ref.current.className = `${initialClasses} bg-white bg-opacity-90 backdrop-blur-lg`;
       } else {
