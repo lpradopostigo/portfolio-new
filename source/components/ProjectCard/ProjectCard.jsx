@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProjectCard(props) {
   return (
-    <div className="shadow-lg rounded-md overflow-hidden md:w-80 sm:w-72 xs:w-80">
+    <div className="shadow-md bg-white rounded-md overflow-hidden md:w-80 sm:w-72 xs:w-80">
       <img
         className="max-h-56 object-cover object-top w-full shadow-md sm:max-h-80 xs:max-h-64"
         src={props.imageSource}
@@ -17,7 +17,7 @@ export default function ProjectCard(props) {
         <div className="flex gap-3 text-sm text-white font-display-0">
           <a
             href={props.websiteLink}
-            className="p-1 bg-black hover:bg-blue-600"
+            className="p-1 bg-black hover:bg-opacity-80"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -27,7 +27,7 @@ export default function ProjectCard(props) {
           {props.repositoryLink != null && (
             <a
               href={props.repositoryLink}
-              className="p-1 bg-black hover:bg-blue-600"
+              className="p-1 bg-black hover:bg-opacity-80"
               target="_blank"
               rel="noreferrer noopener"
             >

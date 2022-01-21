@@ -3,7 +3,6 @@ import React from "react";
 import NavigationBar from "../NavigationBar";
 import Hero from "../Hero";
 import Projects from "../Projects";
-import Contact from "../Contact";
 
 function App() {
   return (
@@ -11,7 +10,6 @@ function App() {
       <NavigationBar />
       <Hero />
       <Projects />
-      <Contact />
     </React.Fragment>
   );
 }
