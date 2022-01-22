@@ -10,14 +10,12 @@ export default function ProjectCard(props) {
         loading="lazy"
       />
       <div className="p-5 flex flex-col gap-3">
-        <span className="font-display-0 font-semibold text-lg">
-          {props.name}
-        </span>
+        <span className="font-display font-semibold text-lg">{props.name}</span>
 
-        <div className="flex gap-3 text-sm text-white font-display-0">
+        <div className="flex gap-3 text-sm text-white font-display">
           <a
             href={props.websiteLink}
-            className="p-1 bg-black hover:bg-opacity-80"
+            className="px-2 py-1 text-sm bg-black rounded"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -27,7 +25,7 @@ export default function ProjectCard(props) {
           {props.repositoryLink != null && (
             <a
               href={props.repositoryLink}
-              className="p-1 bg-black hover:bg-opacity-80"
+              className="px-2 py-1 bg-black text-sm rounded"
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -35,7 +33,7 @@ export default function ProjectCard(props) {
             </a>
           )}
         </div>
-        <p>{props.description}</p>
+        <p className="text-sm">{props.description}</p>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ import travelly from "../../../assets/travelly.jpg";
 export default function Projects() {
   return (
     <section id="projects" className="flex flex-col gap-10 p-10 bg-purple">
-      <h2 className="text-xl font-display-0 font-bold text-white">Projects</h2>
+      <h2 className="text-xl font-display font-bold text-white">Projects</h2>
       <div className="flex flex-wrap gap-10 self-center justify-center">
         <ProjectCard
           name={"Image Cipher Tool"}

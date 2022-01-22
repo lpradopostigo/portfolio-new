@@ -7,8 +7,8 @@ export default function NavigationBar() {
   useEffect(() => {
     const initialClasses = ref.current.className;
     const handleScroll = () => {
-      if (window.scrollY >= 80) {
-        ref.current.className = `${initialClasses} bg-white bg-opacity-90 backdrop-blur-lg`;
+      if (window.scrollY >= 30) {
+        ref.current.className = `${initialClasses} bg-white bg-opacity-90 backdrop-blur-md shadow`;
       } else {
         ref.current.className = initialClasses;
       }
@@ -22,14 +22,14 @@ export default function NavigationBar() {
   return (
     <nav
       ref={ref}
-      className="flex h-screen-8 justify-between items-center px-8 w-full sticky top-0 z-10"
+      className="flex h-screen-8 justify-between font-medium items-center px-8 w-full sticky top-0 z-10 "
     >
       <a href="#hero">
-        <img src={brackets} className="h-8" alt="logo" />
+        <img src={brackets} className="h-8 w-8" alt="logo" />
       </a>
-      <ul className="flex items-center gap-4 font-display-0 font-medium ">
+      <ul className="flex items-center">
         <a href="#projects">
-          <li className="hover:text-purple">Projects</li>
+          <li>Projects</li>
         </a>
       </ul>
     </nav>

@@ -16,10 +16,8 @@ module.exports = {
     },
 
     fontFamily: {
-      "display-0": ["Raleway", "sans-serif"],
-      "display-1": ["Quicksand", "sans-serif"],
-      "display-2": ["Oxanium", "cursive"],
-      sans: ["Roboto", "sans-serif"],
+      display: ["Quicksand", "sans-serif"],
+      sans: ["Inter", "sans-serif"],
     },
 
     colors: {
