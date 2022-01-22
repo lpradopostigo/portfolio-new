@@ -1,6 +1,5 @@
 module.exports = {
-  mode: "jit",
-  purge: ["./public/**/*.html", "./source/**/*.{js,jsx,ts,tsx,vue}"],
+  content: ["./public/**/*.html", "./source/**/*.{js,jsx,ts,tsx,vue}"],
   theme: {
     extend: {
       height: {
