@@ -1,5 +1,11 @@
 /** @type {import('snowpack').SnowpackUserConfig } */
 export default {
+  optimize: {
+    bundle: true,
+    minify: true,
+    target: "es2020",
+    treeshake: true,
+  },
   mount: {
     public: { url: "/", static: true },
     source: { url: "/distributable" },
@@ -14,10 +20,6 @@ export default {
     /* Enable an SPA Fallback in development: */
     // {"match": "routes", "source": ".*", "dest": "/index.html"},
   ],
-  optimize: {
-    /* Example: Bundle your final build: */
-    // "bundle": true,
-  },
   packageOptions: {
     /* ... */
   },
