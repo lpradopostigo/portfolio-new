@@ -27,7 +27,10 @@ export default function NavigationBar() {
       <a href="#hero">
         <img src={brackets} className="h-8 w-8" alt="logo" />
       </a>
-      <ul className="flex items-center">
+      <ul className="flex items-center gap-8">
+        <a href="#experience">
+          <li>Experience</li>
+        </a>
         <a href="#projects">
           <li>Projects</li>
         </a>

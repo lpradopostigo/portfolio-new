@@ -1,13 +1,14 @@
 import React from "react";
 
-export default function WorkingExperience() {
+export default function Experience() {
   return (
-    <section id="projects" className="flex flex-col gap-10 p-10 bg-pink">
-      <h2 className="text-xl font-display font-bold text-white">
-        Working Experience
-      </h2>
+    <section
+      id="experience"
+      className="flex flex-col gap-10 p-10 bg-pink"
+    >
+      <h2 className="text-xl font-display font-bold text-white">Experience</h2>
 
-      <div className="bg-white shadow rounded flex flex-col w-max p-4 gap-6">
+      <div className="bg-white shadow rounded flex flex-col max-w-sm p-4 gap-6">
         <div>
           <span className="block font-semibold font-display text-lg mb-2">
             Bantotal

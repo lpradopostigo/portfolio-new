@@ -3,14 +3,14 @@ import React from "react";
 import NavigationBar from "../NavigationBar";
 import Hero from "../Hero";
 import Projects from "../Projects";
-import WorkingExperience from "../WorkingExperience";
+import Experience from "../Experience";
 
 function App() {
   return (
     <React.Fragment>
       <NavigationBar />
       <Hero />
-      <WorkingExperience />
+      <Experience />
       <Projects />
     </React.Fragment>
   );
