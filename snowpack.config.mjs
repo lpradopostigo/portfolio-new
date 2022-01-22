@@ -3,7 +3,7 @@ export default {
   optimize: {
     bundle: false,
     minify: true,
-    target: "es2018",
+    target: "es2020",
     treeshake: true,
   },
   mount: {
