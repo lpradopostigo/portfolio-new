@@ -1,7 +1,7 @@
 /** @type {import('snowpack').SnowpackUserConfig } */
 export default {
   optimize: {
-    bundle: true,
+    bundle: false,
     minify: true,
     target: "es2018",
     treeshake: true,
