@@ -17,7 +17,12 @@ export default function Hero() {
           </a>
 
           <a href="https://github.com/lpradopostigo">
-            <img className="h-10 w-10" src={github} alt="github" />
+            <img
+              loading="lazy"
+              className="h-10 w-10"
+              src={github}
+              alt="github"
+            />
           </a>
         </div>
       </div>
