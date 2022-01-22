@@ -6,10 +6,7 @@ export default function Hero() {
     <section id="hero" className="h-screen-92 font-display-1">
       <div className="flex flex-col px-8 py-10 gap-3">
         <span className="text-8xl font-medium">Hi,</span>
-        <span className="text-6xl">
-          I'm Luis Prado,
-        </span>
-
+        <span className="text-6xl">I'm Luis Prado,</span>
         <span className="text-4xl font-light">Front End Developer</span>
       </div>
 
