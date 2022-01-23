@@ -5,12 +5,21 @@ import imageCipher from "../../../assets/image-cipher.jpg";
 import audioPlayer from "../../../assets/audio-player.jpg";
 import calculator from "../../../assets/calculator.jpg";
 import travelly from "../../../assets/travelly.jpg";
+import npmPackage from "../../../assets/npm-package.png";
 
 export default function Projects() {
   return (
     <section id="projects" className="flex flex-col gap-10 p-10 bg-purple">
       <h2 className="text-xl font-display font-bold text-white">Projects</h2>
       <div className="flex flex-wrap gap-10 self-center justify-center">
+        <ProjectCard
+          name="grass-audio"
+          description="A gapless audio player class for node, it uses the BASS library as engine"
+          websiteLink="https://www.npmjs.com/package/grass-audio"
+          repositoryLink="https://github.com/lpradopostigo/grass-audio"
+          imageSource={npmPackage}
+        />
+
         <ProjectCard
           name={"Image Cipher Tool"}
           description={
