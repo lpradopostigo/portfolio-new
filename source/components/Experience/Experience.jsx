@@ -2,22 +2,19 @@ import React from "react";
 
 export default function Experience() {
   return (
-    <section
-      id="experience"
-      className="flex flex-col gap-10 p-10 bg-pink"
-    >
-      <h2 className="text-xl font-display font-bold text-white">Experience</h2>
+    <section id="experience" className="bg-pink flex flex-col gap-10 p-10">
+      <h2 className="font-display text-xl font-bold text-white">Experience</h2>
 
-      <div className="bg-white shadow rounded flex flex-col max-w-sm p-4 gap-6">
+      <div className="flex flex-col max-w-sm gap-6 p-4 bg-white rounded shadow">
         <div>
-          <span className="block font-semibold font-display text-lg mb-2">
+          <span className="font-display block mb-2 text-lg font-semibold">
             Bantotal
           </span>
-          <span className="block font-medium text-sm ">
+          <span className=" block text-sm font-medium">
             React Native developer
           </span>
 
-          <span className="block text-xs ">from 2021-05 to this date</span>
+          <span className=" block text-xs">from 2021-05 to this date</span>
         </div>
 
         <p className="text-sm">
