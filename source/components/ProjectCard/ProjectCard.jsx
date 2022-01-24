@@ -1,39 +1,52 @@
 import React from "react";
+import { When } from "react-if";
+import Button from "../Button";
 
-export default function ProjectCard(props) {
+export default function ProjectCard({
+  name,
+  description,
+  imageSource,
+  imageAlternateText,
+  repositoryLink,
+  websiteLink,
+}) {
   return (
-    <div className="shadow-md bg-white rounded-md overflow-hidden md:w-80 sm:w-72 xs:w-80">
+    <div className="md:w-80 sm:w-72 xs:w-80 overflow-hidden bg-white rounded-md shadow-md">
       <img
-        className="max-h-56 object-cover object-center w-full shadow-sm sm:max-h-80 xs:max-h-64"
-        src={props.imageSource}
-        alt={props.imageAlternateText ?? props.name}
+        className="2xs:h-52 xs:h-56 object-cover object-top w-full h-48 shadow-sm"
+        src={imageSource}
+        alt={imageAlternateText || name}
         loading="lazy"
       />
-      <div className="p-5 flex flex-col gap-3">
-        <span className="font-display font-semibold text-lg">{props.name}</span>
 
-        <div className="flex gap-3 text-sm text-white font-display">
-          <a
-            href={props.websiteLink}
-            className="px-2 py-1 text-sm bg-black rounded"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            website
-          </a>
+      <div className="flex flex-col gap-3 p-5">
+        <span className="font-display text-lg font-semibold">{name}</span>
 
-          {props.repositoryLink != null && (
-            <a
-              href={props.repositoryLink}
-              className="px-2 py-1 bg-black text-sm rounded"
+        <div className="font-display flex gap-3 text-sm text-white">
+          <When condition={websiteLink}>
+            <Button
+              variant="link"
               target="_blank"
               rel="noreferrer noopener"
+              href={websiteLink}
+            >
+              website
+            </Button>
+          </When>
+
+          <When condition={repositoryLink}>
+            <Button
+              variant="link"
+              target="_blank"
+              rel="noreferrer noopener"
+              href={repositoryLink}
             >
               repository
-            </a>
-          )}
+            </Button>
+          </When>
         </div>
-        <p className="text-sm">{props.description}</p>
+
+        <p className="text-sm">{description}</p>
       </div>
     </div>
   );
