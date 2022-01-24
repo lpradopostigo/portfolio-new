@@ -22,10 +22,10 @@ export default function NavigationBar() {
   return (
     <nav
       ref={ref}
-      className="flex h-screen-8 justify-between font-medium items-center px-8 w-full sticky top-0 z-10 "
+      className="h-screen-8 sticky top-0 z-10 flex items-center justify-between w-full px-8 font-medium"
     >
       <a href="#hero">
-        <img src={brackets} className="h-8 w-8" alt="logo" />
+        <img src={brackets} className="w-8 h-8" alt="logo" />
       </a>
       <ul className="flex items-center gap-8">
         <a href="#experience">

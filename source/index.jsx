@@ -2,12 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import "./i18n";
+import { OverlayProvider } from "react-aria";
 import App from "./components/App/App";
 import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <OverlayProvider>
+      <App />
+    </OverlayProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

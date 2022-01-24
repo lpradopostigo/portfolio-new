@@ -1,5 +1,9 @@
 import React from "react";
 import { When } from "react-if";
+import { useOverlayTriggerState } from "react-stately";
+import { OverlayContainer, usePress } from "react-aria";
+
+import ImageViewerOverlay from "../ImageOverlay";
 import Button from "../Button";
 
 export default function ProjectCard({
@@ -10,44 +14,63 @@ export default function ProjectCard({
   repositoryLink,
   websiteLink,
 }) {
+  const overlayState = useOverlayTriggerState({});
+  const { pressProps: openTriggerProps } = usePress({
+    onPress: () => overlayState.open(),
+  });
+
   return (
-    <div className="md:w-80 sm:w-72 xs:w-80 overflow-hidden bg-white rounded-md shadow-md">
-      <img
-        className="2xs:h-52 xs:h-56 object-cover object-top w-full h-48 shadow-sm"
-        src={imageSource}
-        alt={imageAlternateText || name}
-        loading="lazy"
-      />
+    <>
+      <div className="md:w-80 sm:w-72 xs:w-80 overflow-hidden bg-white rounded-md shadow-md">
+        <img
+          {...openTriggerProps}
+          className="2xs:h-52 xs:h-56 object-cover object-top w-full h-48 shadow-sm cursor-pointer"
+          src={imageSource}
+          alt={imageAlternateText || name}
+          loading="lazy"
+        />
 
-      <div className="flex flex-col gap-3 p-5">
-        <span className="font-display text-lg font-semibold">{name}</span>
+        <div className="flex flex-col gap-3 p-5">
+          <span className="font-display text-lg font-semibold">{name}</span>
 
-        <div className="font-display flex gap-3 text-sm text-white">
-          <When condition={websiteLink}>
-            <Button
-              variant="link"
-              target="_blank"
-              rel="noreferrer noopener"
-              href={websiteLink}
-            >
-              website
-            </Button>
-          </When>
+          <div className="font-display flex gap-3 text-sm text-white">
+            <When condition={websiteLink}>
+              <Button
+                variant="link"
+                target="_blank"
+                rel="noreferrer noopener"
+                href={websiteLink}
+              >
+                website
+              </Button>
+            </When>
 
-          <When condition={repositoryLink}>
-            <Button
-              variant="link"
-              target="_blank"
-              rel="noreferrer noopener"
-              href={repositoryLink}
-            >
-              repository
-            </Button>
-          </When>
+            <When condition={repositoryLink}>
+              <Button
+                variant="link"
+                target="_blank"
+                rel="noreferrer noopener"
+                href={repositoryLink}
+              >
+                repository
+              </Button>
+            </When>
+          </div>
+
+          <p className="text-sm">{description}</p>
         </div>
-
-        <p className="text-sm">{description}</p>
       </div>
-    </div>
+
+      <When condition={overlayState.isOpen}>
+        <OverlayContainer>
+          <ImageViewerOverlay
+            isOpen
+            onClose={overlayState.close}
+            isDismissable
+            imageSource={imageSource}
+          />
+        </OverlayContainer>
+      </When>
+    </>
   );
 }

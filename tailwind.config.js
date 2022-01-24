@@ -10,6 +10,14 @@ module.exports = {
         "screen-92": "92vh",
       },
 
+      width: {
+        "screen-10": "10wh",
+        "screen-8": "8wh",
+        "screen-4": "4wh",
+        "screen-90": "90vw",
+        "screen-92": "92wh",
+      },
+
       screens: {
         "2xs": "375px",
         xs: "425px",
