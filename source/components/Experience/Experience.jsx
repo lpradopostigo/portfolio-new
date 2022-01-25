@@ -1,26 +1,19 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import ExperienceCard from "../ExperienceCard";
 
 export default function Experience() {
+  const { t } = useTranslation("experience");
   return (
     <section id="experience" className="bg-pink flex flex-col gap-10 p-10">
       <h2 className="font-display text-xl font-bold text-white">Experience</h2>
 
-      <div className="flex flex-col max-w-sm gap-6 p-4 bg-white rounded shadow">
-        <div>
-          <span className="font-display block mb-2 text-lg font-semibold">
-            Bantotal
-          </span>
-          <span className=" block text-sm font-medium">
-            React Native developer
-          </span>
-
-          <span className=" block text-xs">from 2021-05 to this date</span>
-        </div>
-
-        <p className="text-sm">
-          Development of banking apps for iOS an Android devices
-        </p>
-      </div>
+      <ExperienceCard
+        company={t("1.company")}
+        role={t("1.role")}
+        description={t("1.description")}
+        period={{ from: t("1.period.from"), to: t("1.period.to") }}
+      />
     </section>
   );
 }
