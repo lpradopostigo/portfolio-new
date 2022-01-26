@@ -1,0 +1,45 @@
+{
+  "data": [
+    {
+      "name": "Grass Music Player",
+      "description": "A gap-less and library based music player",
+      "repositoryUrl": "https://github.com/lpradopostigo/grass-music-player",
+      "imageUrl": "assets/grass-music-player.png"
+    },
+    {
+      "name": "grass-audio",
+      "description": "A gap-less audio player class for node, it uses the BASS library as engine",
+      "websiteUrl": "https://www.npmjs.com/package/grass-audio",
+      "repositoryUrl": "https://github.com/lpradopostigo/grass-audio",
+      "imageUrl": "assets/npm-package.png"
+    },
+    {
+      "name": "Image Cipher Tool",
+      "description": "A symmetric cipher image tool, the algorithm was developed in Rust and brought to the web using Web Assembly",
+      "websiteUrl": "https://brocolio-cipher.netlify.app",
+      "repositoryUrl": "https://github.com/lprapopostigo/brocolio-cipher",
+      "imageUrl": "assets/image-cipher.jpg"
+    },
+    {
+      "name": "Audio Player",
+      "description": "Simple audio player developed using Lit as component library, typescript and redux for state management",
+      "repositoryUrl": "https://github.com/lpradopostigo/brocolio-music-player",
+      "websiteUrl": "https://brocolio-music-player.netlify.app",
+      "imageUrl": "assets/audio-player.jpg"
+    },
+    {
+      "name": "Calculator",
+      "description": "Material Design responsive javascript calculator",
+      "repositoryUrl": "https://github.com/lprapopostigo/web-calculator",
+      "websiteUrl": "https://brocolio-calculator.netlify.app",
+      "imageUrl": "assets/calculator.jpg"
+    },
+    {
+      "name": "Travelly",
+      "description": "Landing Page concept for a travel agency",
+      "websiteUrl": "https://travelly-brocolio.netlify.app",
+      "repositoryUrl": "https://github.com/lprapopostigo/travelly",
+      "imageUrl": "assets/travelly.jpg"
+    }
+  ]
+}

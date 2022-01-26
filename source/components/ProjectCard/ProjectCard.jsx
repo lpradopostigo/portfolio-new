@@ -9,10 +9,9 @@ import Button from "../Button";
 export default function ProjectCard({
   name,
   description,
-  imageSource,
-  imageAlternateText,
-  repositoryLink,
-  websiteLink,
+  imageUrl,
+  repositoryUrl,
+  websiteUrl,
 }) {
   const overlayState = useOverlayTriggerState({});
   const { pressProps: openTriggerProps } = usePress({
@@ -25,8 +24,8 @@ export default function ProjectCard({
         <img
           {...openTriggerProps}
           className="2xs:h-52 xs:h-56 object-cover object-top w-full h-48 shadow-sm cursor-pointer"
-          src={imageSource}
-          alt={imageAlternateText || name}
+          src={imageUrl}
+          alt={`${name} image`}
           loading="lazy"
         />
 
@@ -34,23 +33,23 @@ export default function ProjectCard({
           <span className="font-display text-lg font-semibold">{name}</span>
 
           <div className="font-display flex gap-3 text-sm text-white">
-            <When condition={websiteLink}>
+            <When condition={websiteUrl}>
               <Button
                 variant="link"
                 target="_blank"
                 rel="noreferrer noopener"
-                href={websiteLink}
+                href={websiteUrl}
               >
                 website
               </Button>
             </When>
 
-            <When condition={repositoryLink}>
+            <When condition={repositoryUrl}>
               <Button
                 variant="link"
                 target="_blank"
                 rel="noreferrer noopener"
-                href={repositoryLink}
+                href={repositoryUrl}
               >
                 repository
               </Button>
@@ -67,7 +66,7 @@ export default function ProjectCard({
             isOpen
             onClose={overlayState.close}
             isDismissable
-            imageSource={imageSource}
+            imageSource={imageUrl}
           />
         </OverlayContainer>
       </When>

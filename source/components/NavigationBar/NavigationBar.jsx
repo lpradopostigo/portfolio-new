@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import brackets from "../../../assets/brackets.svg";
+import { useTranslation } from "react-i18next";
 
 export default function NavigationBar() {
+  const { t } = useTranslation("navigation-bar");
   const ref = useRef(null);
 
   useEffect(() => {
@@ -29,10 +31,10 @@ export default function NavigationBar() {
       </a>
       <ul className="flex items-center gap-8">
         <a href="#experience">
-          <li>Experience</li>
+          <li>{t("experience")}</li>
         </a>
         <a href="#projects">
-          <li>Projects</li>
+          <li>{t("projects")}</li>
         </a>
       </ul>
     </nav>
