@@ -1,0 +1,45 @@
+{
+  "data": [
+    {
+      "name": "Grass Music Player",
+      "description": "Reproductor de música con reproduccion continua (gap-less)",
+      "repositoryUrl": "https://github.com/lpradopostigo/grass-music-player",
+      "imageUrl": "assets/grass-music-player.png"
+    },
+    {
+      "name": "grass-audio",
+      "description": "Librería para reproducir audio de manera continua (gap-less) en node.js",
+      "websiteUrl": "https://www.npmjs.com/package/grass-audio",
+      "repositoryUrl": "https://github.com/lpradopostigo/grass-audio",
+      "imageUrl": "assets/npm-package.png"
+    },
+    {
+      "name": "Brocolio Cipher",
+      "description": "Herramienta de cifrado de imagenes online",
+      "websiteUrl": "https://brocolio-cipher.netlify.app",
+      "repositoryUrl": "https://github.com/lprapopostigo/brocolio-cipher",
+      "imageUrl": "assets/image-cipher.jpg"
+    },
+    {
+      "name": "Mini Audio Player",
+      "description": "Reproductor de música con funcionalidad minima",
+      "repositoryUrl": "https://github.com/lpradopostigo/brocolio-music-player",
+      "websiteUrl": "https://brocolio-music-player.netlify.app",
+      "imageUrl": "assets/audio-player.jpg"
+    },
+    {
+      "name": "Calculadora",
+      "description": "Calculadora con diseño responsive",
+      "repositoryUrl": "https://github.com/lprapopostigo/web-calculator",
+      "websiteUrl": "https://brocolio-calculator.netlify.app",
+      "imageUrl": "assets/calculator.jpg"
+    },
+    {
+      "name": "Travelly",
+      "description": "Concepto de \"landing page\" para una agencia de viajes",
+      "websiteUrl": "https://travelly-brocolio.netlify.app",
+      "repositoryUrl": "https://github.com/lprapopostigo/travelly",
+      "imageUrl": "assets/travelly.jpg"
+    }
+  ]
+}
