@@ -23,7 +23,7 @@
     },
     {
       "name": "Mini Audio Player",
-      "description": "Reproductor de música con funcionalidad minima",
+      "description": "Reproductor de música simple online",
       "repositoryUrl": "https://github.com/lpradopostigo/brocolio-music-player",
       "websiteUrl": "https://brocolio-music-player.netlify.app",
       "imageUrl": "assets/audio-player.jpg"
