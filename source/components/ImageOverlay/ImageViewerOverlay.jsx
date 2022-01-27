@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import {
   useOverlay,
@@ -9,11 +9,26 @@ import {
 } from "react-aria";
 
 export default function ImageViewerOverlay(props) {
+  const { imageUrl } = props;
   const ref = useRef();
   const { overlayProps, underlayProps } = useOverlay(props, ref);
   usePreventScroll();
   const { modalProps } = useModal();
   const { dialogProps } = useDialog(props, ref);
+
+  // workaround for issue https://github.com/adobe/react-spectrum/issues/1513
+  useEffect(() => {
+    const elementsId = ["overlay-container"];
+    elementsId.forEach((id) => {
+      const element = document.getElementById(id);
+      if (!element) {
+        return;
+      }
+      element.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+      });
+    });
+  }, [props.isOpen]);
 
   return (
     <div
@@ -31,7 +46,7 @@ export default function ImageViewerOverlay(props) {
         >
           <img
             className="max-h-[90vh] max-w-[90vw] object-contain"
-            src={props.imageSource}
+            src={imageUrl}
             alt="aea"
           />
         </div>
@@ -39,5 +54,14 @@ export default function ImageViewerOverlay(props) {
     </div>
   );
 }
-ImageViewerOverlay.propTypes = {};
-ImageViewerOverlay.defaultProps = {};
+
+ImageViewerOverlay.propTypes = {
+  isOpen: PropTypes.bool,
+  onClose: PropTypes.func.isRequired,
+  isDismissable: PropTypes.bool,
+  imageUrl: PropTypes.string.isRequired,
+};
+ImageViewerOverlay.defaultProps = {
+  isOpen: false,
+  isDismissable: false,
+};

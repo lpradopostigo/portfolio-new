@@ -61,12 +61,12 @@ export default function ProjectCard({
       </div>
 
       <When condition={overlayState.isOpen}>
-        <OverlayContainer>
+        <OverlayContainer id={"overlay-container"}>
           <ImageViewerOverlay
             isOpen
             onClose={overlayState.close}
             isDismissable
-            imageSource={imageUrl}
+            imageUrl={imageUrl}
           />
         </OverlayContainer>
       </When>
