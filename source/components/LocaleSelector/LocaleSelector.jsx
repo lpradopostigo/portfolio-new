@@ -12,6 +12,7 @@ import { Item, useSelectState } from "react-stately";
 import Button from "../Button";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
+import { When } from "react-if";
 
 export default function LocaleSelector(props) {
   const { i18n } = useTranslation();
@@ -24,6 +25,8 @@ export default function LocaleSelector(props) {
       i18n.changeLanguage(locale);
     },
   });
+  const ref = useRef();
+  const { triggerProps, valueProps, menuProps } = useSelect(props, state, ref);
 
   useEffect(() => {
     const elements = [...state.collection];
@@ -33,19 +36,20 @@ export default function LocaleSelector(props) {
     state.setSelectedKey(key);
   }, [i18n.language]);
 
-  const ref = useRef();
-  const { triggerProps, valueProps, menuProps } = useSelect(props, state, ref);
   return (
     <div className="relative inline-block">
       <HiddenSelect state={state} triggerRef={ref} />
       <Button {...triggerProps} ref={ref}>
-        <span {...valueProps} className="font-sans">{i18n.language}</span>
+        <span {...valueProps} className="font-sans">
+          {state.selectedItem?.rendered}
+        </span>
       </Button>
-      {state.isOpen && (
+
+      <When condition={state.isOpen}>
         <Popover isOpen={state.isOpen} onClose={state.close}>
           <ListBox {...menuProps} state={state} />
         </Popover>
-      )}
+      </When>
     </div>
   );
 }
@@ -79,7 +83,11 @@ function ListBox(props) {
   const { listBoxProps } = useListBox(props, state, listBoxRef);
 
   return (
-    <ul {...listBoxProps} ref={listBoxRef} className="bg-white rounded shadow-md overflow-hidden">
+    <ul
+      {...listBoxProps}
+      ref={listBoxRef}
+      className="overflow-hidden bg-white rounded shadow-md"
+    >
       {[...state.collection].map((item) => (
         <Option key={item.key} item={item} state={state} />
       ))}
@@ -99,7 +107,9 @@ function Option({ item, state }) {
     <li
       {...optionProps}
       ref={ref}
-      className={clsx("focus:outline-none py-1.5 px-3", { "bg-teal": isSelected })}
+      className={clsx("focus:outline-none py-1.5 px-3", {
+        "bg-teal": isSelected,
+      })}
     >
       {item.rendered}
     </li>
