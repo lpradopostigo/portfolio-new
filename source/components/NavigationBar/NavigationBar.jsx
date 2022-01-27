@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import brackets from "../../../assets/brackets.svg";
 import { useTranslation } from "react-i18next";
+import LocaleSelector from "../LocaleSelector";
+import { Item } from "react-stately";
 
 export default function NavigationBar() {
   const { t } = useTranslation("navigation-bar");
@@ -29,14 +31,17 @@ export default function NavigationBar() {
       <a href="#hero">
         <img src={brackets} className="w-8 h-8" alt="logo" />
       </a>
-      <ul className="flex items-center gap-8">
-        <a href="#experience">
-          <li>{t("experience")}</li>
-        </a>
-        <a href="#projects">
-          <li>{t("projects")}</li>
-        </a>
-      </ul>
+      <div className="flex items-center gap-8">
+        <LocaleSelector />
+        <ul className="flex items-center gap-8 capitalize">
+          <a href="#experience">
+            <li>{t("experience")}</li>
+          </a>
+          <a href="#projects">
+            <li>{t("projects")}</li>
+          </a>
+        </ul>
+      </div>
     </nav>
   );
 }
