@@ -11,7 +11,7 @@ const Button = React.forwardRef((props, ref) => {
     containerRef
   );
   const className =
-    "font-display px-2 py-1 text-sm text-white bg-black rounded";
+    "px-2 py-1 text-sm text-white bg-black rounded";
 
   const setRefs = (node) => {
     if (ref && containerRef) {

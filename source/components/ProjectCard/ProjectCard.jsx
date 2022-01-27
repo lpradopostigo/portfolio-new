@@ -5,6 +5,7 @@ import { OverlayContainer, usePress } from "react-aria";
 
 import ImageViewerOverlay from "../ImageOverlay";
 import Button from "../Button";
+import { useTranslation } from 'react-i18next';
 
 export default function ProjectCard({
   name,
@@ -13,6 +14,7 @@ export default function ProjectCard({
   repositoryUrl,
   websiteUrl,
 }) {
+  const { t } = useTranslation("project-card");
   const overlayState = useOverlayTriggerState({});
   const { pressProps: openTriggerProps } = usePress({
     onPress: () => overlayState.open(),
@@ -40,7 +42,7 @@ export default function ProjectCard({
                 rel="noreferrer noopener"
                 href={websiteUrl}
               >
-                website
+                {t("website")}
               </Button>
             </When>
 
@@ -51,7 +53,7 @@ export default function ProjectCard({
                 rel="noreferrer noopener"
                 href={repositoryUrl}
               >
-                repository
+                {t("repository")}
               </Button>
             </When>
           </div>

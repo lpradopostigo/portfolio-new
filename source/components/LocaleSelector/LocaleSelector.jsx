@@ -40,7 +40,7 @@ export default function LocaleSelector(props) {
     <div className="relative inline-block">
       <HiddenSelect state={state} triggerRef={ref} />
       <Button {...triggerProps} ref={ref}>
-        <span {...valueProps} className="font-sans">
+        <span {...valueProps}>
           {state.selectedItem?.rendered}
         </span>
       </Button>
