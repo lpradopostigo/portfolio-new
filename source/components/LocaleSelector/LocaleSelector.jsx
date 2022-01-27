@@ -109,6 +109,7 @@ function Option({ item, state }) {
       ref={ref}
       className={clsx("focus:outline-none py-1.5 px-3", {
         "bg-teal": isSelected,
+        "border-pink border-2": isFocused
       })}
     >
       {item.rendered}

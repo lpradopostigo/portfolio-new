@@ -9,3 +9,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 8vh;
 }
+
+*:focus {
+    outline-color: #f15bb5;
+}
