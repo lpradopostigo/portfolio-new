@@ -7,6 +7,7 @@
     "lint": "prettier --check \\\"source/**/*.{js,jsx,ts,tsx}\\\""
   },
   "dependencies": {
+    "clsx": "^1.1.1",
     "cssnano": "^5.0.15",
     "i18next": "^21.6.7",
     "i18next-http-backend": "^1.3.2",
