@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import brackets from "../../../assets/brackets.svg";
 import { useTranslation } from "react-i18next";
 import LocaleSelector from "../LocaleSelector";
-import { Item } from "react-stately";
 
 export default function NavigationBar() {
   const { t } = useTranslation("navigation-bar");

@@ -9,7 +9,9 @@ export default function Projects() {
 
   return (
     <section id="projects" className="bg-purple flex flex-col gap-10 p-10">
-      <h2 className="font-display capitalize text-xl font-bold text-white">{t("heading")}</h2>
+      <h2 className="font-display text-xl font-bold text-white capitalize">
+        {t("heading")}
+      </h2>
       <div className="flex flex-wrap self-center justify-center gap-10">
         {data.map?.((elem, index) => (
           <ProjectCard key={index} {...elem} />
